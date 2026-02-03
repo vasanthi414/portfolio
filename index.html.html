@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+:root {
+  --bg: #0a0f1c;
+  --glass: rgba(255,255,255,0.08);
+  --border: rgba(255,255,255,0.15);
+  --accent: #00e5ff;
+  --text: #eaeaea;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #111833, #05070f);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  background: var(--glass);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+}
+
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: var(--text);
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent);
+}
+
+/* SECTIONS */
+section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: var(--accent);
+}
+
+/* HERO */
+#home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#home img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  margin-bottom: 20px;
+  box-shadow: 0 0 25px var(--accent);
+}
+
+#home h1 {
+  font-size: 42px;
+}
+
+#home p {
+  max-width: 650px;
+  margin-top: 15px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* GLASS CARD */
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 25px;
+  transition: 0.4s;
+}
+
+.glass:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(0,229,255,0.3);
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.skill {
+  padding: 12px 22px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00e5ff, #7c4dff);
+  color: #000;
+  font-weight: bold;
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 25px;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* CONTACT */
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 12px;
+  border-radius: 8px;
+  color: var(--text);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #00e5ff, #7c4dff);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.social-links a {
+  padding: 14px 28px;
+  border-radius: 30px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: bold;
+  backdrop-filter: blur(12px);
+  transition: 0.4s;
+}
+
+.social-links a:hover {
+  color: #000;
+  background: linear-gradient(135deg, #00e5ff, #7c4dff);
+  box-shadow: 0 0 30px rgba(0,229,255,0.5);
+  transform: translateY(-6px);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  nav ul {
+    display: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">My Portfolio</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="home">
+  <img src="C:\Users\USER\Downloads\pi.jfif" alt="Profile Image">
+  <h1>Hi, I'm Vasanthi</h1>
+  <p>Full Stack Developer passionate about building modern, scalable, and futuristic web applications.</p>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="glass">
+    <p>I am a motivated Full Stack Developer with a strong foundation in modern web technologies.
+I specialize in building responsive, user-friendly, and scalable web applications.
+I enjoy working across both frontend and backend development to create complete solutions.
+I am passionate about continuous learning and staying updated with emerging technologies.
+I focus on writing clean, maintainable code and delivering high-quality user experiences.
+I am eager to contribute my skills to impactful projects and grow as a professional developer.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">GitHub</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="glass project">
+      <img src="C:\Users\USER\Downloads\e73c5cc3ec9ce4c8d6e28652542b6875753a226b.png"alt="Project 1">
+      <h3>Portfolio Website</h3>
+      <p>Personal portfolio built using modern HTML and CSS.</p>
+    </div>
+
+    <div class="glass project">
+      <img src="C:\Users\USER\Downloads\download (3).png" alt="Project 2">
+      <h3>Calculator App</h3>
+      <p>Calculator app using HTML, CSS, and JavaScript.</p>
+    </div>
+
+    <div class="glass project">
+      <img src="C:\Users\USER\Downloads\download (10).jfif" alt="Project 3">
+      <h3>Machine Learning</h3>
+      <p>Foundational ML project exploring data classification.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form class="glass">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<section id="social">
+  <h2>Connect With Me</h2>
+  <div class="social-links">
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Vasanthi | Full Stack Developer
+</footer>
+
+</body>
+</html>
